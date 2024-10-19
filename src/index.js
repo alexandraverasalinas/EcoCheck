@@ -1,3 +1,5 @@
+
+// Boton de actualizaciones
 function learnMore() {
   let Nombre = prompt("¿Cual es tu nombre?");
   let Mensaje = "Gracias " + Nombre + ", mantente atento para mas noticias y actualizaciones" ;
@@ -14,8 +16,19 @@ alert(Mensaje);
 }
 
 
+const observer = new IntersectionObserver((entries) => {
+  entries.forEach((entry) => {
+    console.log(entry)
+    if (entry.isIntersecting) {
+      entry.target.classList.add('show');
+    } else {
+      entry.target.classList.remove('show');
+    }
+  });
+});
 
-
+const hiddenElements = document.querySelectorAll('.hidden');
+hiddenElements.forEach((el) => observer.observe(el));
 
 
 

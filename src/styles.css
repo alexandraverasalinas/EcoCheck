@@ -57,6 +57,9 @@ body {
     justify-content: center;
     align-items: center;    
     height: 100vh;    
+
+    animation: appear linear;
+    animation-timeline: view();
   }
 
   .intro-cont {
@@ -364,6 +367,15 @@ font-family: "Lexend", sans-serif;
   font-size: 17px;
   margin-top: -10px;
   color: rgb(193, 93, 126);
+}
+
+.hidden {
+  opacity: 0;
+  transition: all 1.5s;
+}
+
+.show {
+  opacity: 1;
 }
 
 
